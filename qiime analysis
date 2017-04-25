@@ -25,10 +25,6 @@ After picking OTUs with the Greengenes reference the BIOM-formated tables were m
 Any of the phylogentic trees found in `2016/otus` or `2017/otus` can be used for further analysis (e.g. the `core_diversity_analyses.py` script), as this is the Greengenes reference tree.
 eduroam-int-dhcp-97-152-225:reportresults apple$ source activate qiime1
 (qiime1) eduroam-int-dhcp-97-152-225:reportresults apple$ cd 2017
-(qiime1) eduroam-int-dhcp-97-152-225:2017 apple$ .. cd reportresults
--bash: ..: command not found
-(qiime1) eduroam-int-dhcp-97-152-225:2017 apple$ cd ..
-(qiime1) eduroam-int-dhcp-97-152-225:reportresults apple$ cd 2017
 (qiime1) eduroam-int-dhcp-97-152-225:2017 apple$ validate_mapping_file.py -m map.tsv -o ./vmf
 No errors or warnings were found in mapping file.
 (qiime1) eduroam-int-dhcp-97-152-225:2017 apple$ ls
@@ -36,21 +32,6 @@ map.tsv	otus	slout	vmf
 (qiime1) eduroam-int-dhcp-97-152-225:2017 apple$ open vmf/
 (qiime1) eduroam-int-dhcp-97-152-225:2017 apple$ cd vmf
 (qiime1) eduroam-int-dhcp-97-152-225:vmf apple$ open map.tsv.html
-(qiime1) eduroam-int-dhcp-97-152-225:vmf apple$ cd split_libraries_fastq.py --barcode_type 12 -i bioc3101_2016_read1_50k.fastq.gz -m map.tsv -o ./slout -b bioc3101_2016_barcodes_50k.fastq
--bash: cd: split_libraries_fastq.py: No such file or directory
-(qiime1) eduroam-int-dhcp-97-152-225:vmf apple$ split_libraries_fastq.py --barcode_type 12 -i bioc3101_2016_read1_50k.fastq.gz -m map.tsv -o ./slout -b bioc3101_2016_barcodes_50k.fastq
-Error in split_libraries_fastq.py: No filepaths match pattern/name 'bioc3101_2016_read1_50k.fastq.gz'. All patterns must be matched at least once.
-
-If you need help with QIIME, see:
-http://help.qiime.org
-(qiime1) eduroam-int-dhcp-97-152-225:vmf apple$ cd ..
-(qiime1) eduroam-int-dhcp-97-152-225:2017 apple$ cd ..
-(qiime1) eduroam-int-dhcp-97-152-225:reportresults apple$ cd 2016
-(qiime1) eduroam-int-dhcp-97-152-225:2016 apple$ split_libraries_fastq.py --barcode_type 12 -i bioc3101_2016_read1_50k.fastq.gz -m map.tsv -o ./slout -b bioc3101_2016_barcodes_50k.fastq
-Error in split_libraries_fastq.py: No filepaths match pattern/name 'bioc3101_2016_read1_50k.fastq.gz'. All patterns must be matched at least once.
-
-If you need help with QIIME, see:
-http://help.qiime.org
 (qiime1) eduroam-int-dhcp-97-152-225:2016 apple$ cd ..
 (qiime1) eduroam-int-dhcp-97-152-225:reportresults apple$ 
 (qiime1) eduroam-int-dhcp-97-152-225:reportresults apple$ biom summarize-table -i merged_otu_table.biom
